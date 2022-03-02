@@ -1,17 +1,43 @@
 body{
     font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif;
-}
-
-.logo{
-    
-    width: 45%;
-    margin: auto;
+margin: 0px;
 }
 
 header{
     text-align: center;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
+    padding: 1rem 0;
+    position: relative;
 }
+
+.logo{
+        width: 45%;
+        max-width:250px;  
+}
+
+.firstSection{
+    text-align: center;
+}
+
+
+.emplacement{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding:1px;
+    background-color: #F3F3F3 ;
+}
+.emplacement i {
+    font-size:1.1rem ;
+}
+
+
+
+
+
+
 .steps{
     margin: auto;
 }
@@ -19,6 +45,6 @@ li{
     display: flex;
 }
 img{
-    width: 100%;
+   
     object-fit: cover;
 }
