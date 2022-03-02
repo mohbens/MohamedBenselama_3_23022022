@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet OC ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohbens/Ohmyfood.git"
+  },
+  "author": "Mohamed Redha Benselama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohbens/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/mohbens/Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
