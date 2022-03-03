@@ -12,10 +12,15 @@ body{
 font-family: 'Roboto', sans-serif;
 margin: 0px;
 }
+header{
+    .logo{
+            width: 45%;
+            max-width:250px;  
+    }
+    img{
+        object-fit: cover;
+    }
 
-.logo{
-        width: 45%;
-        max-width:250px;  
 }
 
 
@@ -33,6 +38,9 @@ margin: 0px;
     padding: 2rem 0 3rem 0;
     background-color:#F5F5F5;
     text-align: center;
+    p{
+        color: #8a8888;
+    }
 }
 
 button{
@@ -49,21 +57,123 @@ button{
         transform: scale(1.02);
         opacity: 0.8;
         transition: all 200ms;
+        }
+}
+
+.steps{
+    padding: 2rem 0 ;
+    ol{
+        padding-left: 1.5rem;
+    }
+    h1{
+        margin-left: 1.5rem;
+    }
+    counter-reset: etape;
+    li{
+        position: relative;
+        &::before{
+            content:counter(etape);
+            counter-increment: etape;
+            background-color: #9356DC;
+            display: grid;
+            place-items: center;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 1.4rem;
+            left: -0.8rem;
+        }
+        list-style: none;
+        background-color: #e9e9e9;
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        box-shadow: 0px 1px 16px -7px #000000;
+        
+        &:hover{
+            background-color: #e9d6ff;
+        }
+
+
+        &:hover>.fas{
+                color: #9356DC;
+            }
+
+        .fas{ 
+            margin-right: 1rem;
+            color: #8a8888;
+            
+        }
+    }
+    
+}
+
+.Restaurants{
+    padding-top: 2rem;
+    background-color: #f3f3f3;
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         
     }
-}
+ h1{
+     font-size: 1.5rem;
+     margin-left: 1.5rem;
+ }
 
-li{
-    background-color: #e4e4e4;
-    padding: 1rem 2rem;
-    gap: 1rem;
-    border-radius: 1rem;
-    margin: 1rem;
+ .cardRestaurant{
+    width: 90%;
     box-shadow: 0px 1px 16px -7px #000000;
+    border-radius: 1.5rem;
+    height: 15rem;
+    margin-bottom: 1.5rem;
+    img{
+        border-radius: 1.5rem 1.5rem 0 0 ;
+        height:65%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .infoCard{
+        padding-left: 1rem;
+        h3{
+            margin-bottom: 0;
+        }
+        p{
+            margin: 0
+        }
+    }
+    &:hover{
+        transform: scale(1.02);
+        opacity: 0.9;
+        transition: all 200ms;
+        }
+ }
+
+
 
 }
 
 
-img{
-    object-fit: cover;
+footer{
+    color: white;
+    background-color: #313131;
+    img{
+        margin-top: 2rem;
+        margin-left: 2.5rem;
+        width: 7rem;
+    }
+    li{
+
+        list-style: none;
+        padding-bottom: 10px ;
+    }
+    
+    
+    padding-bottom: 1rem;
+
 }

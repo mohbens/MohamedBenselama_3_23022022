@@ -1,24 +1,40 @@
+* {
+  background-image: none;
+}
+
 header {
   text-align: center;
-  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
+  -webkit-box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
+          box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
   padding: 1rem 0;
   position: relative;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
 
-.logo {
+header .logo {
   width: 45%;
   max-width: 250px;
 }
 
+header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .emplacement {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   padding: 1px;
@@ -32,8 +48,13 @@ body {
   text-align: center;
 }
 
+.description p {
+  color: #8a8888;
+}
+
 button {
-  box-shadow: 2px 1px 16px -5px #000000;
+  -webkit-box-shadow: 2px 1px 16px -5px #000000;
+          box-shadow: 2px 1px 16px -5px #000000;
   font-size: 1rem;
   margin-top: 1rem;
   color: #fff;
@@ -41,25 +62,149 @@ button {
   width: 15rem;
   border: 0px;
   border-radius: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
+
 button:hover {
-  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   opacity: 0.8;
+  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 
-li {
-  background-color: #e4e4e4;
-  padding: 1rem 2rem;
+.steps {
+  padding: 2rem 0;
+  counter-reset: etape;
+}
+
+.steps ol {
+  padding-left: 1.5rem;
+}
+
+.steps h1 {
+  margin-left: 1.5rem;
+}
+
+.steps li {
+  position: relative;
+  list-style: none;
+  background-color: #e9e9e9;
+  padding: 1.5rem 2rem;
   gap: 1rem;
   border-radius: 1rem;
   margin: 1rem;
-  box-shadow: 0px 1px 16px -7px #000000;
+  -webkit-box-shadow: 0px 1px 16px -7px #000000;
+          box-shadow: 0px 1px 16px -7px #000000;
 }
 
-img {
-  object-fit: cover;
+.steps li::before {
+  content: counter(etape);
+  counter-increment: etape;
+  background-color: #9356DC;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1.4rem;
+  left: -0.8rem;
 }
 
+.steps li:hover {
+  background-color: #e9d6ff;
+}
+
+.steps li:hover > .fas {
+  color: #9356DC;
+}
+
+.steps li .fas {
+  margin-right: 1rem;
+  color: #8a8888;
+}
+
+.Restaurants {
+  padding-top: 2rem;
+  background-color: #f3f3f3;
+}
+
+.Restaurants .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Restaurants h1 {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.Restaurants .cardRestaurant {
+  width: 90%;
+  -webkit-box-shadow: 0px 1px 16px -7px #000000;
+          box-shadow: 0px 1px 16px -7px #000000;
+  border-radius: 1.5rem;
+  height: 15rem;
+  margin-bottom: 1.5rem;
+}
+
+.Restaurants .cardRestaurant img {
+  border-radius: 1.5rem 1.5rem 0 0;
+  height: 65%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Restaurants .cardRestaurant .infoCard {
+  padding-left: 1rem;
+}
+
+.Restaurants .cardRestaurant .infoCard h3 {
+  margin-bottom: 0;
+}
+
+.Restaurants .cardRestaurant .infoCard p {
+  margin: 0;
+}
+
+.Restaurants .cardRestaurant:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 0.9;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+footer {
+  color: white;
+  background-color: #313131;
+  padding-bottom: 1rem;
+}
+
+footer img {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  width: 7rem;
+}
+
+footer li {
+  list-style: none;
+  padding-bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */
