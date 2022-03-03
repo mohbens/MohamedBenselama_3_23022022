@@ -114,6 +114,7 @@ button{
 .Restaurants{
     padding-top: 2rem;
     background-color: #f3f3f3;
+   
     .cards{
         display: flex;
         flex-direction: column;
@@ -121,6 +122,23 @@ button{
         align-items: center;
         
     }
+    .nv::before{
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color:#99E2D0;
+        display: grid;
+        place-items: center;
+        color :rgb(42, 134, 42);
+        font-weight: bold;
+        border-radius: .3rem;
+        right: 1rem;
+        top: 1rem;
+       
+    }
+
+
  h1{
      font-size: 1.5rem;
      margin-left: 1.5rem;
@@ -132,6 +150,7 @@ button{
     border-radius: 1.5rem;
     height: 15rem;
     margin-bottom: 1.5rem;
+    position: relative;
     img{
         border-radius: 1.5rem 1.5rem 0 0 ;
         height:65%;
