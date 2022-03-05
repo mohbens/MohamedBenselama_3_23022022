@@ -1,18 +1,17 @@
-@import "./sass/base.scss";
-@import "./sass/components.scss";
-@import "./sass/layouts.scss";
-@import "./sass/pages.scss";
-@import "./sass/themes.scss";
-@import "./sass/utils.scss";
-@import "./sass/vendors.scss";
-
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif;
 margin: 0px;
+
 }
 header{
+    text-align: center;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
+    padding: 1rem 0;
+    position: relative;
     .logo{
             width: 45%;
             max-width:250px;  
@@ -129,8 +128,58 @@ button{
         
     }
     a{
+        background-color: #fff;
         text-decoration: none;
         color: #000000;
+
+        scale: 1;
+        transition: all 200ms ;
+
+        
+        /* une animation en plus*/
+        
+        /*
+        
+        
+        
+        &.page1:active {
+          
+           animation: goTo 0.5s ease-in-out forwards;
+           
+            
+        }
+               
+        &.page2:active {
+          
+            animation: goTo 0.5s ease-in-out forwards;
+             
+         }
+         &.page3:active {
+          
+            animation: goTo 0.5s ease-in-out forwards;
+             
+         }
+         &.page4:active {
+          
+            animation: goTo 0.5s ease-in-out forwards;
+             
+         } 
+        
+         @keyframes goTo {
+            from{
+                scale: 1;
+                transform: translateY(0);
+            }
+            to{
+
+                scale: 1.2;
+                transform: translateY(-50rem);
+            }
+            
+        }
+         */
+      
+        
     }
     .nv::before{
         content: "Nouveau";
@@ -196,7 +245,7 @@ button{
                 -webkit-background-clip: text;
                 opacity: 0;
                 scale: 1;
-                transition: all 400ms ease;
+                transition: all 200ms ease;
                 &:hover{
                     
                     opacity: 1;
@@ -233,5 +282,132 @@ footer{
     
     
     padding-bottom: 1rem;
+
+}
+/**************************************************************/
+/*******************resto 1                   *****************/
+/**************************************************************/
+.couverture {
+    
+    img {
+        width: 100%;        
+        height: 28vh;
+        object-fit: cover;
+        object-position: center ;
+    }
+}
+.menu{
+    margin-top: -3rem;
+    padding: 25px 0;
+    background-color: #f5f5f5;
+    border-radius: 30px 30px 0 0 ;
+    position: relative;
+    .titre__menu{
+        display: flex;
+        position: relative;
+        margin-bottom: 25px;
+       
+        i{
+            position: absolute;
+            font-size: 1.8rem;
+            right: 3.2rem;
+            top: 43%;
+            transform: translateY(-50%);
+            transition: all 200ms ease;
+            
+            &.fas{
+                color: transparent;
+                background-image: linear-gradient(#9356DC,#FF79DA);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                scale: 1;
+                transition: all 200ms ease;
+                &:hover{
+                    
+                    opacity: 1;
+                    scale: 2;
+                   transform: translateY(-50%) scale(1.1);       
+                   
+                }
+                
+            }
+        }
+        
+    }
+    h2{
+        
+        margin: 0;
+
+       font-family: "shrikhand",cursive;
+       padding-left: 18px;
+    }
+    h3{
+        padding-left: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #564e4e;
+
+    }
+
+
+    .plat{
+        background-color: #fff;
+        margin: 10px;
+        padding:0;
+        border-radius: 20px;
+        box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
+        display: flex;
+        overflow: hidden;
+        
+        &:hover .good{
+            
+            transition: transform 200ms ease;
+            margin-right: 0;
+            transition: all .5s ease;
+
+        }
+        
+        
+        h3{
+            margin: 0;
+            padding: 15px 0 0 15px;
+            text-transform: none;
+            color: #000;
+            font-weight: 900;
+        }
+        p{
+            padding: 0 0 15px 15px;
+            margin-top: 3px  ;
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #564e4e;
+        }
+        .prix{
+            padding: 15px;
+            margin-left: auto;
+            display: flex;
+            align-items: flex-end;
+            font-weight: bold;
+            color: #000;
+            
+        }
+        .good{
+            border-radius: 0 15px 15px 0;
+            width:4rem;
+            background-color: #99E2D0;
+            margin-right: -4rem;
+            transition: all .5s;
+        }
+
+    }
+
+
+
+
+
+
+
+
 
 }
