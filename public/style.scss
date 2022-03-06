@@ -303,7 +303,17 @@ footer{
     border-radius: 30px 30px 0 0 ;
     position: relative;
     
-    
+  /* .menu__categorie{
+    &:hover .category::after{
+
+        content: "";
+        height: .25rem;
+        width:5/rem;
+        background-color: #99E2D0;
+        display: -webkit-box;
+        
+    }
+   }*/
     .titre__menu{
         display: flex;
         position: relative;
@@ -349,14 +359,16 @@ footer{
         text-transform: uppercase;
         font-weight: 500;
         color: #564e4e;
-        margin-top: 5rem;
+        margin-top: 2rem;
         &::after{
             content: "";
             height: 0.25rem;
             width:3rem;
             background-color: #99E2D0;
             display: -webkit-box;
+
         }
+        
         
     }
     
@@ -414,7 +426,7 @@ footer{
             color: #000;
             font-weight: 900;
             overflow: hidden;
-            white-space: nowrap;
+           
             text-overflow: ellipsis;
             
         }
