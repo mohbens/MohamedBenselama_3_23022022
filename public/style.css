@@ -297,11 +297,19 @@ footer li {
   font-family: "shrikhand", cursive;
   padding-left: 18px;
 }
-.menu h3 {
+.menu .category {
   padding-left: 1rem;
   text-transform: uppercase;
   font-weight: 500;
   color: #564e4e;
+  margin-top: 5rem;
+}
+.menu .category::after {
+  content: "";
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
+  display: -webkit-box;
 }
 .menu .plat {
   background-color: #fff;
@@ -311,11 +319,32 @@ footer li {
   box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
   display: flex;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .plat:hover .good {
   transition: transform 200ms ease;
   margin-right: 0;
   transition: all 0.5s ease;
+}
+.menu .plat:hover .fas {
+  transition: transform 200ms ease;
+  transition: all 0.5s ease;
+  rotate: 360;
+  animation: rotation 0.5s ease;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.menu .plat .description__menu {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .plat h3 {
   margin: 0;
@@ -323,6 +352,9 @@ footer li {
   text-transform: none;
   color: #000;
   font-weight: 900;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .plat p {
   padding: 0 0 15px 15px;
@@ -330,6 +362,9 @@ footer li {
   margin-bottom: 0;
   font-weight: 500;
   color: #564e4e;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .plat .prix {
   padding: 15px;
@@ -345,6 +380,23 @@ footer li {
   background-color: #99E2D0;
   margin-right: -4rem;
   transition: all 0.5s;
+  display: grid;
+  place-items: center;
+}
+.menu .plat .good .fas {
+  color: #99E2D0;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+.menu .button__commander {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

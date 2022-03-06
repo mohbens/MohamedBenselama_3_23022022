@@ -302,6 +302,8 @@ footer{
     background-color: #f5f5f5;
     border-radius: 30px 30px 0 0 ;
     position: relative;
+    
+    
     .titre__menu{
         display: flex;
         position: relative;
@@ -327,8 +329,8 @@ footer{
                     
                     opacity: 1;
                     scale: 2;
-                   transform: translateY(-50%) scale(1.1);       
-                   
+                    transform: translateY(-50%) scale(1.1);       
+                    
                 }
                 
             }
@@ -338,18 +340,28 @@ footer{
     h2{
         
         margin: 0;
-
-       font-family: "shrikhand",cursive;
-       padding-left: 18px;
+        
+        font-family: "shrikhand",cursive;
+        padding-left: 18px;
     }
-    h3{
+    .category{
         padding-left: 1rem;
         text-transform: uppercase;
         font-weight: 500;
         color: #564e4e;
-
+        margin-top: 5rem;
+        &::after{
+            content: "";
+            height: 0.25rem;
+            width:3rem;
+            background-color: #99E2D0;
+            display: -webkit-box;
+        }
+        
     }
-
+    
+    
+    
 
     .plat{
         background-color: #fff;
@@ -358,30 +370,65 @@ footer{
         border-radius: 20px;
         box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
         display: flex;
+
+
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         
         &:hover .good{
             
             transition: transform 200ms ease;
             margin-right: 0;
             transition: all .5s ease;
-
+            
+        }
+        &:hover .fas{
+            transition: transform 200ms ease;
+            transition: all .5s ease;
+            rotate: 360;
+            animation: rotation .5s ease;
         }
         
         
+        @keyframes rotation {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+        
+        
+        .description__menu{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
         h3{
             margin: 0;
             padding: 15px 0 0 15px;
             text-transform: none;
             color: #000;
             font-weight: 900;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            
         }
+        
+        
         p{
             padding: 0 0 15px 15px;
             margin-top: 3px  ;
             margin-bottom: 0;
             font-weight: 500;
             color: #564e4e;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         .prix{
             padding: 15px;
@@ -398,13 +445,33 @@ footer{
             background-color: #99E2D0;
             margin-right: -4rem;
             transition: all .5s;
+            display: grid;
+            place-items: center;
+            .fas{
+                color: #99E2D0;
+                display: grid;
+                place-items: center;
+                background: #fff;
+                border-radius: 1rem;
+                width: 2rem;
+                height: 2rem;
+                
+            }
         }
-
+        
+        
     }
 
-
-
-
+    .button__commander{
+            
+            display: block;
+            margin: auto;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+    
+    
+    
 
 
 
