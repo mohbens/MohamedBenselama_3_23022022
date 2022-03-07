@@ -8,6 +8,52 @@ body {
   margin: 0px;
 }
 
+.chargement {
+  position: fixed;
+  background-image: linear-gradient(#FF79DA, #60c78e, #9356DC);
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  animation: chargementOff 1s ease-in-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.chargement h2 {
+  opacity: 1;
+  position: absolute;
+  font-family: "shrikhand", cursive;
+  font-size: 5rem;
+}
+.chargement h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #fff;
+}
+.chargement h2:nth-child(2) {
+  color: #fff;
+  animation: OMFanim 4s ease-in-out infinite;
+}
+@keyframes OMFanim {
+  0%, 100% {
+    clip-path: polygon(0% 48%, 17% 44%, 29% 45%, 40% 51%, 51% 59%, 68% 65%, 84% 62%, 97% 50%, 100% 45%, 100% 99%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 61%, 17% 66%, 28% 65%, 42% 63%, 55% 53%, 69% 45%, 84% 41%, 95% 40%, 100% 41%, 100% 99%, 0% 100%);
+  }
+}
+
+@keyframes chargementOff {
+  from {
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 header {
   text-align: center;
   box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.116);
@@ -249,7 +295,7 @@ footer li {
 }
 
 /**************************************************************/
-/*******************resto 1                   *****************/
+/*******************restos                   *****************/
 /**************************************************************/
 .couverture img {
   width: 100%;
@@ -332,6 +378,9 @@ footer li {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  animation: oneByOne 0.5s;
+  animation-delay: calc(var(--order) * 100ms);
+  animation-fill-mode: both;
 }
 .menu .plat:hover .good {
   transition: transform 200ms ease;
@@ -343,6 +392,16 @@ footer li {
   transition: all 0.5s ease;
   rotate: 360;
   animation: rotation 0.5s ease;
+}
+@keyframes oneByOne {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes rotation {
   from {
