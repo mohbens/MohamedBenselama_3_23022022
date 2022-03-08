@@ -1,3 +1,13 @@
+@import 'sass/utils/_variables.scss';
+@import "sass/base/_typography";
+@import "sass/components/_buttons.scss";
+@import "sass/layout/_footer.scss";
+@import "sass/layout/_header.scss";
+@import "sass/layout/_navigation.scss";
+@import "sass/pages/_home.scss";
+@import "sass/pages/_restau.scss";
+@import "sass/utils/_mixins.scss";
+
 html{
     scroll-behavior: smooth;
 }
@@ -195,49 +205,7 @@ button{
         transition: all 200ms ;
 
         
-        /* une animation en plus*/
-        
-        /*
-        
-        
-        
-        &.page1:active {
-          
-           animation: goTo 0.5s ease-in-out forwards;
-           
-            
-        }
-               
-        &.page2:active {
-          
-            animation: goTo 0.5s ease-in-out forwards;
-             
-         }
-         &.page3:active {
-          
-            animation: goTo 0.5s ease-in-out forwards;
-             
-         }
-         &.page4:active {
-          
-            animation: goTo 0.5s ease-in-out forwards;
-             
-         } 
-        
-         @keyframes goTo {
-            from{
-                scale: 1;
-                transform: translateY(0);
-            }
-            to{
-
-                scale: 1.2;
-                transform: translateY(-50rem);
-            }
-            
-        }
-         */
-      
+     
         
     }
     .nv::before{
@@ -586,8 +554,16 @@ nav{
 }
 
 @media screen and (min-width :800px) {
-
-         
+    .chargement{
+        
+        
+        h2{ 
+           
+            font-size: 5rem;
+        }
+    }
+        
+            
     .steps{
         display: flex;
         flex-direction: column;
@@ -637,6 +613,7 @@ nav{
             
         }
     }
+    
     .menu{
 
         margin: auto;
