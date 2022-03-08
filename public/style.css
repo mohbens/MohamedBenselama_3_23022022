@@ -279,6 +279,9 @@ nav .back {
   object-fit: cover;
   object-position: center;
 }
+.couverture h2 {
+  display: none;
+}
 
 .menu {
   margin-top: -3rem;

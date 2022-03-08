@@ -322,6 +322,9 @@ nav{
         object-fit: cover;
         object-position: center ;
     }
+    h2{
+        display: none;
+    }
 }
 .menu{
     margin-top: -3rem;
@@ -364,6 +367,7 @@ nav{
         }
         
     }
+
     h2{
         
         margin: 0;
@@ -407,7 +411,9 @@ nav{
         text-overflow: ellipsis;
 
         @include oneByone;
-        animation-delay: calc(var(--order) * 100ms);
+        $calcdelay:calc(var(--order) * 100ms);
+        
+        animation-delay: $calcdelay;
         animation-fill-mode: both;
 
         @include hover-plat;
