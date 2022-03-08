@@ -5,12 +5,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .chargement {

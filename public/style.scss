@@ -11,10 +11,7 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    margin: 0px;
 
-}
 .chargement{
     position: fixed;
     background-image: linear-gradient($couleurSecondaire,#60c78e,$couleurPrimaire);;
@@ -397,9 +394,6 @@ nav{
     
 
     .plat{
-       
-
-
         background-color: #fff;
         margin: 10px;
         padding:0;
@@ -411,8 +405,9 @@ nav{
         text-overflow: ellipsis;
 
         @include oneByone;
-        $calcdelay:calc(var(--order) * 100ms);
         
+        $calcdelay:calc(var(--order) * 100ms);
+
         animation-delay: $calcdelay;
         animation-fill-mode: both;
 
