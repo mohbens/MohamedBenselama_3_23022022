@@ -11,7 +11,10 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    margin: 0px;
 
+}
 .chargement{
     position: fixed;
     background-image: linear-gradient($couleurSecondaire,#60c78e,$couleurPrimaire);;
@@ -394,6 +397,9 @@ nav{
     
 
     .plat{
+       
+
+
         background-color: #fff;
         margin: 10px;
         padding:0;
@@ -404,11 +410,36 @@ nav{
         white-space: nowrap;
         text-overflow: ellipsis;
 
-        @include oneByone;
         
-        $calcdelay:calc(var(--order) * 100ms);
-
-        animation-delay: $calcdelay;
+        /*
+        @include oneByone;
+        */  
+        @for $i from 1 through 10 {
+            &.plat-#{$i}{
+                
+                animation-delay: calc($i * 100ms);
+                
+            }
+        }
+        
+        animation: oneByOne .5s;
+        
+        
+        
+        @keyframes oneByOne {
+            from{
+                transform:translateY(30px) ;
+                opacity: 0;    
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0) ;
+            }
+            
+        }
+    
+      
+        
         animation-fill-mode: both;
 
         @include hover-plat;

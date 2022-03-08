@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0px;
+}
+
 .chargement {
   position: fixed;
   background-image: linear-gradient(#FF79DA, #60c78e, #9356DC);
@@ -346,11 +350,43 @@ nav .back {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  animation: oneByOne1 0.5s;
-  animation-delay: calc(var(--order) * 100ms);
+  /*
+  @include oneByone;
+  */
+  animation: oneByOne 0.5s;
   animation-fill-mode: both;
 }
-@keyframes oneByOne1 {
+.menu .plat.plat-1 {
+  animation-delay: 100ms;
+}
+.menu .plat.plat-2 {
+  animation-delay: 200ms;
+}
+.menu .plat.plat-3 {
+  animation-delay: 300ms;
+}
+.menu .plat.plat-4 {
+  animation-delay: 400ms;
+}
+.menu .plat.plat-5 {
+  animation-delay: 500ms;
+}
+.menu .plat.plat-6 {
+  animation-delay: 600ms;
+}
+.menu .plat.plat-7 {
+  animation-delay: 700ms;
+}
+.menu .plat.plat-8 {
+  animation-delay: 800ms;
+}
+.menu .plat.plat-9 {
+  animation-delay: 900ms;
+}
+.menu .plat.plat-10 {
+  animation-delay: 1000ms;
+}
+@keyframes oneByOne {
   from {
     transform: translateY(30px);
     opacity: 0;

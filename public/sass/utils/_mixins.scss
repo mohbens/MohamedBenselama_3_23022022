@@ -48,20 +48,9 @@ animation:  chargementOff1 1s ease-in-out;
 }
 
 
-@mixin oneByone {
-    @keyframes oneByOne1 {
-        from{
-            transform:translateY(30px) ;
-            opacity: 0;    
-        }
-        to{
-            opacity: 1;
-            transform: translateY(0) ;
-        }
-        
-    }
-    animation: oneByOne1 .5s;
-}
+
+
+
 
 @mixin ohmyfoodcharge {
     @keyframes OMFanim {
@@ -76,3 +65,7 @@ animation:  chargementOff1 1s ease-in-out;
     animation: OMFanim 4s ease-in-out infinite;
     
 }
+
+
+
+
