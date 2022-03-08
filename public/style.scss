@@ -12,18 +12,18 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif;
-margin: 0px;
+    margin: 0px;
 
 }
 .chargement{
     position: fixed;
-    background-image: linear-gradient(#FF79DA,#60c78e,#9356DC);;
+    background-image: linear-gradient($couleurSecondaire,#60c78e,$couleurPrimaire);;
     inset: 0;
     z-index: 2;
     opacity: 0.9;
-    animation: chargementOff 1s ease-in-out;
+
+    @include chargementOff ;
+
     animation-delay: 3s;
     animation-fill-mode: forwards;
     display: flex;
@@ -47,32 +47,17 @@ margin: 0px;
     }
     h2:nth-child(2){
         color: #fff;
-        animation: OMFanim 4s ease-in-out infinite;
 
-    }
-    @keyframes OMFanim {
-
-        0%,100%{
-            clip-path: polygon(0% 48%, 17% 44%, 29% 45%, 40% 51%, 51% 59%, 68% 65%, 84% 62%, 97% 50%, 100% 45%, 100% 99%, 0% 100%);
-        }
-        50%{
-            clip-path: polygon(0 61%, 17% 66%, 28% 65%, 42% 63%, 55% 53%, 69% 45%, 84% 41%, 95% 40%, 100% 41%, 100% 99%, 0% 100%);        }
+        @include ohmyfoodcharge;
         
+
     }
     
     
 
 }
 
-@keyframes chargementOff {
-    from{
-        opacity: 1;
-    }
-    to{
-        visibility: hidden;
-        opacity: 0;
-    }
-}
+
 
 
 header{
@@ -104,10 +89,10 @@ header{
 
 .description{
     padding: 2rem 0 3rem 0;
-    background-color:#F5F5F5;
+    background-color:$gris-clair;
     text-align: center;
     p{
-        color: #8a8888;
+        color: $gris-foncé;
     }
 }
 
@@ -120,7 +105,7 @@ button{
     width: 15rem;
     border: 0px;
     border-radius: 30px;
-    background-image: linear-gradient(#FF79DA,#9356DC);
+    background-image: linear-gradient($couleurSecondaire,$couleurPrimaire);
 
     transform: scale(1);
     transition: transform 200ms ease;
@@ -134,7 +119,7 @@ button{
     padding: 2rem 0 ;
     a{
         text-decoration: none;
-        color: #8a8888;
+        color: $gris-foncé;
     }
     ol{
         padding-left: 1.5rem;
@@ -148,7 +133,7 @@ button{
         &::before{
             content:counter(etape);
             counter-increment: etape;
-            background-color: #9356DC;
+            background-color: $couleurPrimaire;
             display: grid;
             place-items: center;
             color: white;
@@ -173,12 +158,12 @@ button{
 
 
         &:hover>.fas{
-                color: #9356DC;
+                color: $couleurPrimaire;
             }
 
         .fas{ 
             margin-right: 1rem;
-            color: #8a8888;
+            color: $gris-foncé;
             
         }
     }
@@ -213,7 +198,7 @@ button{
         position: absolute;
         height: 2rem;
         width: 5rem;
-        background-color:#99E2D0;
+        background-color:$couleurTertiaire;
         display: grid;
         place-items: center;
         color :rgb(42, 134, 42);
@@ -267,7 +252,7 @@ button{
 
             &.fas{
                 color: transparent;
-                background-image: linear-gradient(#9356DC,#FF79DA);
+                background-image: linear-gradient($couleurPrimaire,$couleurSecondaire);
                 background-clip: text;
                 -webkit-background-clip: text;
                 opacity: 0;
@@ -341,25 +326,10 @@ nav{
 .menu{
     margin-top: -3rem;
     padding: 25px 0;
-    background-color: #f5f5f5;
+    background-color: $gris-clair;
     border-radius: 30px 30px 0 0 ;
     position: relative;
-    
-  /* .menu__categorie{
-    &:hover .category::after{
-
-        content: "";
-        height: .25rem;
-        width:5/rem;
-        background-color: #99E2D0;
-        display: -webkit-box;
-        
-    }
-   }*/
-
-   
-
-
+ 
     .titre__menu{
         display: flex;
         position: relative;
@@ -375,12 +345,13 @@ nav{
             
             &.fas{
                 color: transparent;
-                background-image: linear-gradient(#9356DC,#FF79DA);
+                background-image: linear-gradient($couleurPrimaire,$couleurSecondaire);
                 background-clip: text;
                 -webkit-background-clip: text;
                 opacity: 0;
                 scale: 1;
                 transition: all 400ms ease;
+
                 &:hover{
                     
                     opacity: 1;
@@ -410,7 +381,7 @@ nav{
             content: "";
             height: 0.25rem;
             width:3rem;
-            background-color: #99E2D0;
+            background-color: $couleurTertiaire;
             display: -webkit-box;
 
         }
@@ -434,47 +405,16 @@ nav{
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        animation: oneByOne .5s;
 
-
+        @include oneByone;
         animation-delay: calc(var(--order) * 100ms);
         animation-fill-mode: both;
-        &:hover .good{
-            
-            transition: transform 200ms ease;
-            margin-right: 0;
-            transition: all .5s ease;
-            
-        }
-        &:hover .fas{
-            transition: transform 200ms ease;
-            transition: all .5s ease;
-            rotate: 360;
-            animation: rotation .5s ease;
-        }
 
-        @keyframes oneByOne {
-            from{
-                transform:translateY(30px) ;
-                opacity: 0;    
-            }
-            to{
-                opacity: 1;
-                transform: translateY(0) ;
-            }
-            
-        }
+        @include hover-plat;
+
+       
         
-        @keyframes rotation {
-            from{
-                transform: rotate(0deg);
-            }
-            to{
-                transform: rotate(360deg);
-            }
-            
-        }
-        
+       
         
         .description__menu{
             overflow: hidden;
@@ -486,10 +426,8 @@ nav{
             padding: 15px 0 0 15px;
             text-transform: none;
             color: #000;
-            font-weight: 900;
-            overflow: hidden;
-           
-            text-overflow: ellipsis;
+            @include txt-ellipsis(900)
+            
             
         }
         
@@ -498,11 +436,15 @@ nav{
             padding: 0 0 15px 15px;
             margin-top: 3px  ;
             margin-bottom: 0;
-            font-weight: 500;
             color: #564e4e;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+
+            @include txt-ellipsis(500)
+
+            
+            
+            /*white-space: nowrap;*/
+
+
         }
         .prix{
             padding: 15px;
@@ -516,13 +458,13 @@ nav{
         .good{
             border-radius: 0 15px 15px 0;
             width:4rem;
-            background-color: #99E2D0;
+            background-color: $couleurTertiaire;
             margin-right: -4rem;
             transition: all .5s;
             display: grid;
             place-items: center;
             .fas{
-                color: #99E2D0;
+                color: $couleurTertiaire;
                 display: grid;
                 place-items: center;
                 background: #fff;
@@ -538,11 +480,11 @@ nav{
 
     .button__commander{
             
-            display: block;
-            margin: auto;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
+        display: block;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
     
     
     

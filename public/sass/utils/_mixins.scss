@@ -1,0 +1,78 @@
+
+
+@mixin hover-plat {
+    @keyframes rotation {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+        
+    }
+    
+    &:hover .good{
+            
+        transition: transform 200ms ease;
+        transition: all .5s ease;
+        margin-right: 0;
+        
+    }
+    &:hover .fas{
+        transition: transform 200ms ease;
+        transition: all .5s ease;
+        animation: rotation .5s ease;
+        
+    }
+
+}
+@mixin txt-ellipsis ($fontweight){
+    font-weight: $fontweight;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+@mixin  chargementOff {   
+@keyframes chargementOff1 {
+    from{
+        opacity: 1;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+animation:  chargementOff1 1s ease-in-out;
+}
+
+
+@mixin oneByone {
+    @keyframes oneByOne1 {
+        from{
+            transform:translateY(30px) ;
+            opacity: 0;    
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0) ;
+        }
+        
+    }
+    animation: oneByOne1 .5s;
+}
+
+@mixin ohmyfoodcharge {
+    @keyframes OMFanim {
+
+        0%,100%{
+            clip-path: polygon(0% 48%, 17% 44%, 29% 45%, 40% 51%, 51% 59%, 68% 65%, 84% 62%, 97% 50%, 100% 45%, 100% 99%, 0% 100%);
+        }
+        50%{
+            clip-path: polygon(0 61%, 17% 66%, 28% 65%, 42% 63%, 55% 53%, 69% 45%, 84% 41%, 95% 40%, 100% 41%, 100% 99%, 0% 100%);        }
+        
+    }
+    animation: OMFanim 4s ease-in-out infinite;
+    
+}
