@@ -22,6 +22,7 @@ body{
     z-index: 2;
     opacity: 0.9;
 
+    
     @include chargementOff ;
 
     animation-delay: 3s;
@@ -32,22 +33,34 @@ body{
     min-height: 100vh;
     
     h2{ 
-        opacity: 1;
+        
         position: absolute;
         font-family: "shrikhand",cursive;
         font-size: 3rem;
+              
+
         
     }
 
+    @keyframes rotatelogo {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+        
+    }
 
     h2:nth-child(1){
         color: transparent;
         -webkit-text-stroke:0.5px #fff ;
+        animation: rotatelogo 1s ease-in-out;
 
+        
     }
     h2:nth-child(2){
         color: #fff;
-
         @include ohmyfoodcharge;
         
 
@@ -294,7 +307,10 @@ footer{
         list-style: none;
         padding-bottom: 10px ;
     }
-    
+    a{
+        color: white;
+        text-decoration: none;
+    }
     
     padding-bottom: 1rem;
 
@@ -432,7 +448,8 @@ nav{
         @keyframes oneByOne {
             from{
                 transform:translateY(30px) ;
-                opacity: 0;    
+                opacity: 0;   
+
             }
             to{
                 opacity: 1;
@@ -565,7 +582,7 @@ nav{
             text-align: center;
         }
         .cards{
-           
+           padding-bottom: 3.5rem;
             flex-wrap: wrap;
             flex-direction: initial;
             column-gap: 1rem;
