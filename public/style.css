@@ -19,7 +19,7 @@ body {
 
 .chargement {
   position: fixed;
-  background-image: linear-gradient(#FF79DA, #60c78e, #9356DC);
+  background-image: linear-gradient(#FF79DA, #99E2D0, #9356DC);
   inset: 0;
   z-index: 2;
   opacity: 0.9;
@@ -186,7 +186,7 @@ button:hover {
   background-color: #fff;
   text-decoration: none;
   color: #000000;
-  scale: 1;
+  
   transition: all 200ms;
 }
 .Restaurants .nv::before {
@@ -240,6 +240,7 @@ button:hover {
   top: 50%;
   transform: translateY(-50%);
   transition: all 200ms ease;
+  /*heart*/
 }
 .Restaurants .cardRestaurant .infoCard i.fas {
   color: transparent;
@@ -247,12 +248,11 @@ button:hover {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  scale: 1;
+  
   transition: all 200ms ease;
 }
 .Restaurants .cardRestaurant .infoCard i.fas:hover {
   opacity: 1;
-  scale: 2;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -328,12 +328,11 @@ nav .back {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  scale: 1;
+  
   transition: all 400ms ease;
 }
 .menu .titre__menu i.fas:hover {
   opacity: 1;
-  scale: 2;
   transform: translateY(-50%) scale(1.1);
 }
 .menu h2 {

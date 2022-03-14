@@ -15,9 +15,11 @@ body{
     margin: 0px;
 
 }
+
+
 .chargement{
     position: fixed;
-    background-image: linear-gradient($couleurSecondaire,#60c78e,$couleurPrimaire);;
+    background-image: linear-gradient($couleurSecondaire,$couleurTertiaire,$couleurPrimaire);
     inset: 0;
     z-index: 2;
     opacity: 0.9;
@@ -55,7 +57,9 @@ body{
     h2:nth-child(1){
         color: transparent;
         -webkit-text-stroke:0.5px #fff ;
+       
         animation: rotatelogo 1s ease-in-out;
+
 
         
     }
@@ -63,8 +67,7 @@ body{
         color: #fff;
         @include ohmyfoodcharge;
         
-
-    }
+        }
     
     
 
@@ -262,19 +265,21 @@ button{
             transition: all 200ms ease;
             
 
-
+            /*heart*/
             &.fas{
                 color: transparent;
                 background-image: linear-gradient($couleurPrimaire,$couleurSecondaire);
                 background-clip: text;
                 -webkit-background-clip: text;
+                
+
                 opacity: 0;
                 scale: 1;
                 transition: all 200ms ease;
+                
                 &:hover{
-                    
                     opacity: 1;
-                    scale: 2;
+                   
                    transform: translateY(-50%) scale(1.1);       
                    
                 }
@@ -377,7 +382,7 @@ nav{
                 &:hover{
                     
                     opacity: 1;
-                    scale: 2;
+                   
                     transform: translateY(-50%) scale(1.1);       
                     
                 }
@@ -458,15 +463,10 @@ nav{
             
         }
     
-      
-        
         animation-fill-mode: both;
 
         @include hover-plat;
 
-       
-        
-       
         
         .description__menu{
             overflow: hidden;
